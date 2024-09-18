@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#game-container {
+    width: 100vw;
+    height: 80vh;
+    display: block;
+}
+
+#controls {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#controls input {
+    width: 60px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#controls button {
+    margin: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#controls button:hover {
+    background-color: #0056b3;
+}
+
+#history-controls {
+    margin-top: 10px;
+}
+
+#history-controls button {
+    margin: 3px;
+    padding: 5px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #6c757d;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#history-controls button:hover {
+    background-color: #5a6268;
+}
+
+#next-moves {
+    margin-top: 10px;
+    max-width: 300px; /* 幅を調整 */
+}
+
+#moves-list {
+    max-height: 150px; /* 高さを制限 */
+    overflow-y: auto;  /* 縦方向のスクロールを有効化 */
+    overflow-x: auto;  /* 横方向のスクロールを有効化 */
+    resize: both;      /* 縦横に拡大縮小可能 */
+    border: 1px solid #ccc; /* 枠線 */
+    padding: 5px;          /* 内側の余白 */
+    background-color: #fafafa; /* 背景色 */
+    border-radius: 4px; /* 角を丸く */
+}
+
+#moves-list button {
+    margin: 3px;
+    padding: 5px 8px;
+    font-size: 14px;
+    cursor: pointer;
+    white-space: nowrap; /* テキストの折り返しを防止 */
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745; /* 緑色 */
+    color: white;
+    transition: background-color 0.3s;
+}
+
+#moves-list button:hover {
+    background-color: #218838; /* 少し濃い緑色 */
+}
+
+#message {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #dc3545; /* エラーメッセージを赤色に */
+}
+
+#current-player {
+    font-size: 16px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 4px;
+    color: #FFFFFF;
+    background-color: #007BFF;
+}
+
+#current-player.black {
+    background-color: #000000;
+}
+
+#current-player.white {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+#score {
+    font-size: 16px;
+    margin-top: 5px;
+}

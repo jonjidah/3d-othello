@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>3Dオセロ (8x8x8)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>3Dオセロ (8×8×8)</h1>
+    <div id="game-container"></div>
+    <div id="controls">
+        <div id="current-player">現在のプレイヤー: 黒</div>
+        <div id="score">黒: 0 | 白: 0</div>
+        <div id="move-input">
+            <input type="number" id="x" placeholder="X (0-7)" min="0" max="7">
+            <input type="number" id="y" placeholder="Y (0-7)" min="0" max="7">
+            <input type="number" id="z" placeholder="Z (0-7)" min="0" max="7">
+            <button id="make-move">手を打つ</button>
+            <button id="reset-game">ゲームをリセット</button>
+        </div>
+        <!-- Undo/Redoボタンを追加 -->
+        <div id="history-controls">
+            <button id="undo-move">Undo</button>
+            <button id="redo-move">Redo</button>
+        </div>
+        <div id="next-moves">
+            <h3>可能な次の手:</h3>
+            <div id="moves-list"></div>
+        </div>
+        <div id="message"></div>
+    </div>
+
+    <!-- Three.jsとOrbitControlsをCDNから読み込む -->
+    <script src="https://unpkg.com/three@0.128.0/build/three.min.js"></script>
+    <script src="https://unpkg.com/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <!-- ゲームスクリプトを読み込む -->
+    <script src="script.js"></script>
+</body>
+</html>
